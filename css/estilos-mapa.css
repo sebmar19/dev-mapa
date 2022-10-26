@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+list-style: none;
+}
+
+.flex {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+   }
+
+.mapa-wrapper{
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+.info-contenedor {
+    position: absolute;
+    width: 300px;
+    min-height: 300px;
+    top:  370px;;
+    border: 1px solid #061c19;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #FFE0C5;
+}
+
+.titulo-info-contenedor {
+    min-height: 50px;
+    background: #061c19;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 6px 19px;
+    box-sizing: border-box;
+}
+.previo-cont {
+    min-height: 250px;
+    box-sizing: border-box;
+    padding: 20px;
+   
+}
+
+.comunidad-cont {
+    min-height: 250px;
+    box-sizing: border-box;
+    display: none;
+}
+.textos-wrapper{
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    min-height: 250px;
+    padding: 20px;
+}
+.previo-texto {
+    text-align: center;
+    color: #89412b;
+    font-family: mr-eaves-xl-sans, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.previo-icon {
+    width: 50px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.texto-comunidad {
+    font-family: mr-eaves-xl-sans, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    color: #061c19;
+    margin-bottom: 20px;
+}
+.link-comunidad {
+    align-self: flex-end;
+    position: relative;
+}
+.link-comunidad::before{
+    content: "";
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-left: 10px solid #89412b;
+      border-bottom: 7px solid transparent;
+      position: absolute;
+      left: -13px;
+
+}
+
+.link-comunidad::after {
+    content: "";
+    width: 100%;
+    height: 10px;
+    background: url(../img/linea-onda.svg);
+    background-repeat: repeat-x;
+    position: absolute;
+    left: 0;
+    bottom: -11px;
+}
+.link-comunidad a {
+    text-align: right;
+    font-family: mr-eaves-xl-sans, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #89412b;
+}
+
+.titulo-info {
+    color: #ffdfc5;
+    font-family: kautiva-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.departamento-info {
+    color: #ed7845;
+    font-family: kautiva-pro, sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.mobile-ui-mapa{
+    display: none;
+}
+
+@media only screen and (max-width:640px) {
+    .mapa-wrapper {
+        max-width: 100%;
+        width: 100%;
+    }
+    .mapa-wrapper .st3 {
+        display: none;
+    }
+    #Capa_1 text {
+        display: none;
+    }
+    .titulo-mobile {
+        color: #061C1E;
+        font-family: kautiva-pro, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        text-transform: uppercase;
+        font-size: 21px;
+        margin: 10px;
+        width: 90%;
+    }
+    .texto-comunidad {
+        font-size: 16px;
+        line-height: 17px;
+    }
+    .titulo-info {
+        font-size: 20px;
+    }
+    .departamento-info {
+        font-size: 18px;
+    }
+    .textos-wrapper{
+        min-height: 200px;
+    }
+    .info-contenedor{
+        top: 79vw;
+    }
+    form.lista-mapa {
+        position: absolute;
+        top: 250px;
+        left: 10px;
+        z-index: 10;
+    }
+    .accion-text {
+        font-family: mr-eaves-xl-sans, sans-serif;
+        font-weight: 700;
+        font-style: italic;
+        margin: 10px;
+    }
+    .mobile-ui-mapa{
+        display: block;
+    }
+    select#deps {
+        font-family: 'mr-eaves-xl-sans-narrow';
+        color: #ed7845;
+        background: #061c19;
+        margin: auto;
+        font-size: 20px;
+        display: block;
+        padding: 4px;
+    }
+   
+}
